@@ -1,0 +1,15 @@
+{% extends "QRGeneratorApp/base.html" %} 
+{% block title %}
+viewData
+{% endblock %}
+{% block content %}
+<h1>Uploaded Files</h1>
+    <div>
+        {% for file in files %}
+            <div>
+                <p>URL: {{ file.url_text }}</p>
+                <img src="{{ file.img_upload.url }}" alt="Image" style="max-width: 300px;">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
